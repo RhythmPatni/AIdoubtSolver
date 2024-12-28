@@ -3,21 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Help Chat</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>API Key Configuration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px auto;
+      width: 300px; /* Set the desired width for the popup */
+    }
+    #api-key-input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    #save-button {
+      background-color: #053b3c;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%; /* Make the button span the width of the popup */
+    }
+  </style>
 </head>
 <body>
-  <button id="aiHelpBtn">AI Helps</button>
-
-  <div id="chatInterface">
-    <div id="chatHeader">AI Chat</div>
-    <div id="chatMessages"></div>
-    <div id="chatInputContainer">
-      <input type="text" id="chatInput" placeholder="Type a message..." />
-      <button id="sendBtn">Send</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <h3>Configure API Key</h3>
+  <input type="text" id="api-key-input" placeholder="Enter Gemini API key here" />
+  <button id="save-button">Save API Key</button>
+  <p id="status" style="color: green; margin-top: 10px;"></p>
+  <script src="popup.js"></script>
 </body>
 </html>
