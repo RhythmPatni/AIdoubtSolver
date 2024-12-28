@@ -1,13 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "Your Chrome Extension Name",
+    "name": "AZ AI Help",
     "version": "0.1",
-    "author": "First Last",
-    "description": "A description about your Chrome Extension...",
+    "author": "Rhythm Patni",
+    "description": "Extension to add AI help to AZ problemset.",
+    "permissions" : [
+        "storage",
+        "tabs"
+    ],
     "content_scripts": [
       {
         "matches": [
-          "<all_urls>"
+          "https://maang.in/problems/*"
         ],
         "js": [
           "content.js"
@@ -25,6 +29,6 @@
     ],
     "action": {
       "default_popup": "index.html",
-      "default_title": "A tooltip popup description when you hover over the Chrome Extension icon."
+      "default_title": "Enjoy the AI help and solve that problem :)"
     }
   }
